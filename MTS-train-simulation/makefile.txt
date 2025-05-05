@@ -1,0 +1,13 @@
+CC = gcc
+LDFLAGS = -lpthread
+
+TARGET = mts
+SOURCES = mts.c
+
+all: $(TARGET)
+
+$(TARGET): $(SOURCES)
+	$(CC) -o $(TARGET) $(SOURCES) $(LDFLAGS)
+
+clean:
+	rm -f $(TARGET)
